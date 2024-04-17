@@ -12,19 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SemocUcsal"
         tools:targetApi="31">
-
+<!--        <activity-->
+<!--            android:name=".LoginActivity"-->
+<!--            android:exported="false" />-->
         <activity
-            android:name=".EventListActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".EventListActivity"
+            android:exported="true" />
         <activity
             android:name=".EventDetailActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

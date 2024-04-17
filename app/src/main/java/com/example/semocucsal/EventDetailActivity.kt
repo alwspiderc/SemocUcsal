@@ -14,11 +14,13 @@ class EventDetailActivity : AppCompatActivity() {
 
         val imageView: ImageView = findViewById(R.id.event_item_image)
         val nameTextView: TextView = findViewById(R.id.event_item_name)
+        val descriptionTextView: TextView = findViewById(R.id.event_item_description)
         val dateTextView: TextView = findViewById(R.id.event_item_date)
         val locationTextView: TextView = findViewById(R.id.event_item_location)
 
         imageView.setImageResource(event.image)
         nameTextView.text = event.name
+        descriptionTextView.text = event.description
         dateTextView.text = event.date
         locationTextView.text = event.location
     }

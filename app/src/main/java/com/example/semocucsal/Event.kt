@@ -7,6 +7,7 @@ data class Event(
     val id: Int,
     val image: Int,
     val name: String,
+    val description: String,
     val date: String,
     val location: String
 ) : Serializable

@@ -59,14 +59,21 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:backgroundTint="@color/blue"
         android:text="Login"
+        android:textColor="#06111C"
+        app:backgroundTint="#C3D0D6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInputPassword" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

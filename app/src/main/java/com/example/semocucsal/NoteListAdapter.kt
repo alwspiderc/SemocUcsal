@@ -18,6 +18,8 @@ class NoteListAdapter(private val events: List<Event>, private val context: Cont
             val imageView: ImageView = itemView.findViewById(R.id.event_item_image)
             val nameTextView: TextView = itemView.findViewById(R.id.event_item_name)
             val dateTextView: TextView = itemView.findViewById(R.id.event_item_date)
+            val descriptionTextView: TextView = itemView.findViewById(R.id.event_item_description)
+
             val locationTextView: TextView = itemView.findViewById(R.id.event_item_location)
             val buttonSubscribe: Button = itemView.findViewById(R.id.event_item_subscribe)
 
@@ -32,6 +34,7 @@ class NoteListAdapter(private val events: List<Event>, private val context: Cont
                 context.startActivity(intent)
             }
 
+            descriptionTextView.visibility = View.INVISIBLE
             buttonSubscribe.visibility = View.INVISIBLE
 
         }

@@ -8,15 +8,37 @@
     tools:context=".SubmitActivity">
 
 
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputDate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D9D9D9"
+            android:hint="Digite a descrição" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="88dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextName">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -29,34 +51,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputAddress"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputName">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D9D9D9"
-            android:hint="Digite seu endereço" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInputAddress">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -69,22 +71,22 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputDescription"
+        android:id="@+id/textInputAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputDate">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextDescription"
+            android:id="@+id/editTextAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#D9D9D9"
-            android:hint="Digite a descrição" />
+            android:hint="Digite seu endereço" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,13 +94,13 @@
         android:id="@+id/login_button_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/blue"
         android:text="Submeter Trabalho"
         android:textColor="#06111C"
         app:backgroundTint="#C3D0D6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textInputDescription" />
+        app:layout_constraintTop_toBottomOf="@id/textInputAddress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

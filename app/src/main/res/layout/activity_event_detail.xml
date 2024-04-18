@@ -7,14 +7,12 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/event_detail_layout"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_margin="0dp"
-        android:background="@drawable/radius"
-        android:orientation="vertical">
-
+        android:background="@drawable/radius">
 
         <ImageView
             android:id="@+id/event_item_image"
@@ -22,10 +20,8 @@
             android:layout_height="300dp"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:layout_editor_absoluteY="2dp" />
+             />
 
         <TextView
             android:id="@+id/event_item_name"
@@ -36,9 +32,8 @@
             android:text="Event Name"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/event_item_image"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/event_item_location"
@@ -47,7 +42,7 @@
             android:layout_marginLeft="20dp"
             android:text="Event Location"
             android:textSize="26sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_item_name"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -57,7 +52,7 @@
             android:layout_marginLeft="20dp"
             android:text="Event Date"
             android:textSize="26sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_item_location"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -67,24 +62,21 @@
             android:layout_marginLeft="20dp"
             android:text=""
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/event_item_date"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/event_item_subscribe"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#4BD8ED"
             android:text="Inscrever-se"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            android:textColor="#08111C"
+            app:layout_constraintTop_toBottomOf="@id/event_item_description"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="626dp"
-            />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    </LinearLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

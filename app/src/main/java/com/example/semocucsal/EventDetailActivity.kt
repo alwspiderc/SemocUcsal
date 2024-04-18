@@ -14,6 +14,7 @@ class EventDetailActivity : AppCompatActivity() {
 
         val event = intent.getSerializableExtra("EVENT") as Event
 
+        // recuperando os elementos da tela
         val imageView: ImageView = findViewById(R.id.event_item_image)
         val nameTextView: TextView = findViewById(R.id.event_item_name)
         val descriptionTextView: TextView = findViewById(R.id.event_item_description)
@@ -28,6 +29,7 @@ class EventDetailActivity : AppCompatActivity() {
         dateTextView.text = event.date
         locationTextView.text = event.location
 
+        // faz com que o card ocupe a tela inteira quando tiver em detalhes
         val eventDetailLayout: ViewGroup = findViewById<ViewGroup>(R.id.event_detail_layout)
         val params = eventDetailLayout.layoutParams
         params.height = ViewGroup.LayoutParams.MATCH_PARENT

@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="700dp"
         android:layout_margin="0dp"
         android:background="@drawable/radius"
         android:orientation="vertical">
@@ -74,6 +74,7 @@
             android:id="@+id/event_item_subscribe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="Inscrever-se"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

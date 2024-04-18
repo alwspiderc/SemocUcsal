@@ -1,6 +1,7 @@
 package com.example.semocucsal
 
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,11 +21,18 @@ class EventDetailActivity : AppCompatActivity() {
         val locationTextView: TextView = findViewById(R.id.event_item_location)
         val buttonSubscribe: Button = findViewById(R.id.event_item_subscribe)
 
+
         imageView.setImageResource(event.image)
         nameTextView.text = event.name
         descriptionTextView.text = event.description
         dateTextView.text = event.date
         locationTextView.text = event.location
+
+        val eventDetailLayout: ViewGroup = findViewById<ViewGroup>(R.id.event_detail_layout)
+        val params = eventDetailLayout.layoutParams
+        params.height = ViewGroup.LayoutParams.MATCH_PARENT
+        params.width = ViewGroup.LayoutParams.MATCH_PARENT
+        eventDetailLayout.layoutParams = params
 
         buttonSubscribe.setOnClickListener {
                 buttonSubscribe.text = if (buttonSubscribe.text.toString().equals("Inscrever-se", ignoreCase = true)) "Inscrito" else "Inscrever-se"

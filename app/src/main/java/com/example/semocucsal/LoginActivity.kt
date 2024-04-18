@@ -19,10 +19,15 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
-        val loginButton: Button = findViewById(R.id.login_button)
+        login()
+    }
+
+    fun login() {
+        val loginButton: Button = findViewById(R.id.bt_entrar)
         loginButton.setOnClickListener {
             val intent = Intent(this, EventListActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

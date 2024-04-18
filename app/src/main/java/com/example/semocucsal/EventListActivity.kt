@@ -1,10 +1,10 @@
 package com.example.semocucsal
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
@@ -15,23 +15,25 @@ class EventListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_event_list)
 
         val recyclerView = findViewById<RecyclerView>(R.id.event_list_recyclerview)
+        val buttonSubscribe: Button = findViewById(R.id.event_item_button_subcribe)
         recyclerView.adapter = NoteListAdapter(events(), this)
-        val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
+
+        buttonSubscribe.setOnClickListener {
+            val intent = Intent(this, SubmitActivity::class.java)
+            startActivity(intent)
+        }
     }
+
 
     private fun events(): List<Event> {
         return listOf(
-            Event(1, R.drawable.semoc_logo,"Event 1", "sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka", "01/01/2023", "Location 1"),
-            Event(2, R.drawable.semoc_logo, "Event 2","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","02/02/2023", "Location 2"),
-            Event(3, R.drawable.semoc_logo, "Event 3","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","03/03/2023", "Location 3"),
-            Event(4, R.drawable.semoc_logo, "Event 4","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","04/04/2023", "Location 4"),
-            Event(5, R.drawable.semoc_logo, "Event 5","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","05/05/2023", "Location 5"),
-            Event(6, R.drawable.semoc_logo, "Event 6","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","06/06/2023", "Location 6"),
-            Event(7, R.drawable.semoc_logo, "Event 7","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","07/07/2023", "Location 7"),
-            Event(8, R.drawable.semoc_logo, "Event 8","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","08/08/2023", "Location 8"),
-            Event(9, R.drawable.semoc_logo, "Event 9","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","09/09/2023", "Location 9"),
-            Event(10, R.drawable.semoc_logo, "Event 10","sdjhjakhdjkshdjasdkjashdjkashdjk dkshdkjsahda asdkjhsjkdashdjk asjkdhasjkdhasjk sdskjahdjad dakjhdakjs dajshdjka","10/10/2023", "Location 10")
+            Event(1, R.drawable.image1,"What is Lorem Ipsum", "Lorem Ipsum is simply dummy text of the printing and text galley of type and scrambled it to make a type specimen book. It has typesetting, remaining essentially unchanged. and mor.", "01/01/2023", "written by Cicero in 45 BC"),
+            Event(2, R.drawable.image2, "What is Lorem Ipsum","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a  leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop .","02/02/2023", "written by Cicero in 45 BC"),
+            Event(3, R.drawable.image3, "What is Lorem Ipsum","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.","03/03/2023", "written by Cicero in 45 BC"),
+            Event(4, R.drawable.image4, "What is Lorem Ipsum","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.","04/04/2023", "written by Cicero in 45 BC"),
+            Event(5, R.drawable.image5, "What is Lorem Ipsum","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.","05/05/2023", "written by Cicero in 45 BC"),
         )
     }
 }

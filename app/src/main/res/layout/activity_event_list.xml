@@ -7,6 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".EventListActivity">
 
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="#202C35"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-9dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="115dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/semoc_logo"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/event_item_button_subcribe"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:text="Submeter Trabalho"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        tools:layout_editor_absoluteX="226dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/event_list_recyclerview"
         android:layout_width="match_parent"
@@ -21,25 +54,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:background="#202C35"
-        app:layout_constraintEnd_toEndOf="@id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-1dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="115dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/semoc_logo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
